@@ -1,17 +1,16 @@
 html,
 body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     background-color: black;
 }
 
-@media (orientation: landscape) {
+@media (orientation: portrait) {
     html,
     body {
-        width: 100vw;
-        height: 100vh;
+        margin-top: -25px;
     }
 }
 
@@ -24,15 +23,8 @@ body * {
 
 .game {
     margin: auto;
-    width: 100%;
-    height: 100%;
-}
-
-@media (orientation: landscape) {
-    .game {
-        width: 100vw;
-        height: calc(100vh - env(safe-area-inset-bottom, 0px));
-    }
+    width: 100vw;
+    height: calc(100vh - env(safe-area-inset-bottom, 0px));
 }
 
 canvas {
