@@ -39,7 +39,6 @@ Prince of Persia reimplementation written in HTML5 / JavaScript (MS-DOS version)
 - Touch Controls (tap/drag area on screen, fight mode in brackets):
 
   ![Mobile](assets/web/mobile.svg)
-
   - Dragging can be used to trigger continuous move sequences, e.g.
     - _Run Jump_: Tap Left or Right -> Hold -> Drag in Left or Right corner
     - _Jump Grab_: (Run) Jump -> Hold -> Drag to Center (Shift)

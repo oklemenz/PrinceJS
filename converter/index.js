@@ -2,7 +2,7 @@
 
 const path = require("path");
 const fs = require("fs");
-const xml2json = require("xml2json");
+const { XMLParser } = require("fast-xml-parser");
 
 const SIZE = 100;
 const PrinceJS = {
@@ -49,7 +49,10 @@ function buildLevels(file, offset) {
 function buildLevelFile(file, offset) {
   const filePath = path.resolve(file);
   const dataXML = fs.readFileSync(filePath);
-  const data = JSON.parse(xml2json.toJson(dataXML));
+  const data = new XMLParser({
+    ignoreAttributes: false,
+    attributeNamePrefix: ""
+  }).parse(dataXML);
   const spec = determineSpec(data, file, offset);
   const level = transformLevel(spec);
   if (level.id >= 90) {
