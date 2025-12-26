@@ -15,7 +15,7 @@
     "convert:own:99": "node converter/index.js './converter/98 - Own/level1.xml' 98",
     "convert:own:100": "node converter/index.js './converter/98 - Own/level2.xml' 98",
     "lint": "npm run prettier && eslint . --fix",
-    "prettier": "prettier \"**/*.{js,json,md,html}\" --write --loglevel error"
+    "prettier": "prettier \"**/*.{js,json,md,html}\" --write --log-level error"
   },
   "repository": {
     "type": "git",
